@@ -12,9 +12,9 @@
   <DefaultLocale>en-US</DefaultLocale>
   <DisplayName DefaultValue="Email to Asana"/>
   <Description DefaultValue="Copy a direct link to this email, or send it straight into Asana as a new task."/>
-  <IconUrl DefaultValue="https://REPLACE-WITH-YOUR-HOST/icon-32.png"/>
-  <HighResolutionIconUrl DefaultValue="https://REPLACE-WITH-YOUR-HOST/icon-80.png"/>
-  <SupportUrl DefaultValue="https://REPLACE-WITH-YOUR-HOST/"/>
+  <IconUrl DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/icon-80.png"/>
+  <SupportUrl DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/"/>
 
   <AppDomains>
     <AppDomain>https://app.asana.com</AppDomain>
@@ -33,7 +33,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
-        <SourceLocation DefaultValue="https://REPLACE-WITH-YOUR-HOST/taskpane.html"/>
+        <SourceLocation DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/taskpane.html"/>
       </DesktopSettings>
     </Form>
   </FormSettings>
@@ -90,13 +90,13 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon-16" DefaultValue="https://REPLACE-WITH-YOUR-HOST/icon-16.png"/>
-        <bt:Image id="icon-32" DefaultValue="https://REPLACE-WITH-YOUR-HOST/icon-32.png"/>
-        <bt:Image id="icon-80" DefaultValue="https://REPLACE-WITH-YOUR-HOST/icon-80.png"/>
+        <bt:Image id="icon-16" DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/icon-16.png"/>
+        <bt:Image id="icon-32" DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/icon-32.png"/>
+        <bt:Image id="icon-80" DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/icon-80.png"/>
       </bt:Images>
       <bt:Urls>
-        <bt:Url id="Commands.Url" DefaultValue="https://REPLACE-WITH-YOUR-HOST/taskpane.html"/>
-        <bt:Url id="Taskpane.Url" DefaultValue="https://REPLACE-WITH-YOUR-HOST/taskpane.html"/>
+        <bt:Url id="Commands.Url" DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/taskpane.html"/>
+        <bt:Url id="Taskpane.Url" DefaultValue="https://bramblebyte.github.io/outlook-asana-addin/taskpane.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="GroupLabel" DefaultValue="Email to Asana"/>

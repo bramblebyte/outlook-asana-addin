@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Email to Asana</title>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<style>
+  :root { font-family: "Segoe UI", Arial, sans-serif; }
+  body { margin: 0; padding: 16px; color: #242424; font-size: 14px; }
+  h1 { font-size: 15px; margin: 0 0 12px 0; }
+  .subject { font-weight: 600; margin-bottom: 4px; word-break: break-word; }
+  .linkbox { background: #f3f2f1; border-radius: 4px; padding: 8px; font-size: 12px;
+             word-break: break-all; margin: 10px 0; max-height: 90px; overflow-y: auto; }
+  button { display: block; width: 100%; box-sizing: border-box; padding: 9px 10px; margin: 8px 0;
+           border-radius: 4px; border: 1px solid #0059ff; background: #0059ff; color: white;
+           font-size: 14px; cursor: pointer; }
+  button.secondary { background: white; color: #0059ff; }
+  button:disabled { opacity: .55; cursor: default; }
+  .status { font-size: 12px; margin-top: 6px; min-height: 16px; }
+  .status.ok { color: #0e7c2f; }
+  .status.err { color: #c4314b; }
+  .gear { background: none; border: none; color: #0059ff; font-size: 12px; padding: 0;
+          width: auto; display: inline; text-decoration: underline; cursor: pointer; }
+  .settings { display: none; margin-top: 14px; border-top: 1px solid #e1dfdd; padding-top: 12px; }
+  .settings.open { display: block; }
+  label { display: block; font-size: 12px; font-weight: 600; margin: 8px 0 3px; }
+  input { width: 100%; box-sizing: border-box; padding: 6px; font-size: 13px;
+          border: 1px solid #c8c6c4; border-radius: 4px; }
+  .hint { font-size: 11px; color: #6b6b6b; margin-top: 2px; }
+  hr { border: none; border-top: 1px solid #e1dfdd; margin: 14px 0; }
+</style>
+</head>
+<body>
+  <h1>Email to Asana</h1>
+  <div class="subject" id="subject">Loading…</div>
+  <div class="linkbox" id="linkbox">Building link…</div>
+
+  <button id="copyBtn">📋 Copy link</button>
+  <div class="status" id="copyStatus"></div>
+
+  <hr/>
+
+  <button id="asanaBtn">➕ Create Asana task</button>
+  <div class="status" id="asanaStatus"></div>
+
+  <div style="text-align:right; margin-top:6px;">
+    <button class="gear" id="settingsToggle">⚙ Asana settings</button>
+  </div>
+
+  <div class="settings" id="settings">
+    <label for="pat">Asana Personal Access Token</label>
+    <input id="pat" type="password" placeholder="0/xxxxxxxxxxxxxxxx" />
+    <div class="hint">Asana → profile photo → My Settings → Apps → Manage Developer Apps → Create new token.</div>
+
+    <label for="project">Project GID (recommended)</label>
+    <input id="project" type="text" placeholder="e.g. 1201234567890123" />
+    <div class="hint">Open the project in Asana; the number after /0/ in the URL.</div>
+
+    <label for="workspace">Workspace GID (used only if no Project GID is set — task goes to My Tasks)</label>
+    <input id="workspace" type="text" placeholder="e.g. 1201234567890000" />
+
+    <button id="saveSettings">Save settings</button>
+    <div class="status" id="settingsStatus"></div>
+  </div>
+
+<script src="taskpane.js"></script>
+</body>
+</html>
